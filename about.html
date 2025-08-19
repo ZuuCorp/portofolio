@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0b0b">
+  <title>zuCorps · À propos</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="transition"></div>
+  <header class="site-header">
+    <div class="container">
+      <a href="./index.html" class="brand">zuCorps</a>
+      <nav class="nav" aria-label="Navigation principale">
+        <a href="./index.html">Accueil</a>
+        <a href="./about.html">À propos</a>
+        <a href="./projects.html">Projets</a>
+        <a href="./contact.html">Contact</a>
+      </nav>
+      <button class="menu" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <main>
+    <section id="a-propos" class="section about">
+      <div class="container">
+        <div class="about-content">
+          <h3>À propos</h3>
+          <p>Passionné par les interfaces soignées et les architectures robustes. J’aime transformer des idées en produits utiles, accessibles et performants.</p>
+          <div class="skills">
+            <div class="skill">
+              <div class="skill-head"><span class="left"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a6 6 0 0 0-6 6v3H4v9h16v-9h-2V8a6 6 0 0 0-6-6Zm0 2a4 4 0 0 1 4 4v3H8V8a4 4 0 0 1 4-4Z"/></svg>JavaScript</span><span class="skill-value">90%</span></div>
+              <div class="bar"><div class="fill" data-level="90"></div></div>
+            </div>
+            <div class="skill">
+              <div class="skill-head"><span class="left"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2 1 21h22L12 2Zm0 4.5 7.53 13H4.47L12 6.5Z"/></svg>React</span><span class="skill-value">85%</span></div>
+              <div class="bar"><div class="fill" data-level="85"></div></div>
+            </div>
+            <div class="skill">
+              <div class="skill-head"><span class="left"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 4h16v4H4V4Zm0 6h16v10H4V10Zm2 2v6h12v-6H6Z"/></svg>Node.js</span><span class="skill-value">80%</span></div>
+              <div class="bar"><div class="fill" data-level="80"></div></div>
+            </div>
+            <div class="skill">
+              <div class="skill-head"><span class="left"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 1 3 5v6c0 5 3.8 9.7 9 11 5.2-1.3 9-6 9-11V5l-9-4Zm0 2.2 7 3.1v4.7c0 4.1-2.9 7.9-7 9-4.1-1.1-7-4.9-7-9V6.3l7-3.1Z"/></svg>Pentest</span><span class="skill-value">70%</span></div>
+              <div class="bar"><div class="fill" data-level="70"></div></div>
+            </div>
+            <div class="skill">
+              <div class="skill-head"><span class="left"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 6h16v2H4V6Zm0 5h16v2H4v-2Zm0 5h10v2H4v-2Z"/></svg>UI/UX</span><span class="skill-value">75%</span></div>
+              <div class="bar"><div class="fill" data-level="75"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <span>© <span id="year"></span> zuCorps</span>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script defer src="./script.js"></script>
+</body>
+</html>

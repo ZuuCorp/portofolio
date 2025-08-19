@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b0b0b">
+  <meta name="description" content="Contact · zuCorps — Développeur Full‑Stack.">
+  <link rel="canonical" href="https://zuucorp.github.io/portofolio/contact.html">
+  <title>zuCorps · Contact</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="transition"></div>
+  <header class="site-header">
+    <div class="container">
+      <a href="./index.html" class="brand">zuCorps</a>
+      <nav class="nav" aria-label="Navigation principale">
+        <a href="./index.html">Accueil</a>
+        <a href="./projects.html">Projets</a>
+        <a href="./contact.html" aria-current="page">Contact</a>
+      </nav>
+      <button class="menu" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <main>
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h3>Contact</h3>
+        <div class="contact-grid">
+          <form id="contact-form" autocomplete="on">
+            <div class="field">
+              <label for="name">Nom</label>
+              <input id="name" name="name" type="text" required>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" required>
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn">Envoyer</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+          <div class="social">
+            <a href="https://www.linkedin.com/in/username" target="_blank" rel="noopener" aria-label="LinkedIn" class="icon">
+              <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path fill="currentColor" d="M4.983 3.5C4.983 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.483 1.12 2.483 2.5zM.5 8h4V23h-4zM8 8h3.8v2.05h.054c.53-1.003 1.828-2.058 3.764-2.058 4.022 0 4.77 2.652 4.77 6.1V23h-4v-6.44c0-1.535-.028-3.51-2.14-3.51-2.14 0-2.468 1.668-2.468 3.396V23h-4z"/></svg>
+            </a>
+            <a href="https://twitter.com/username" target="_blank" rel="noopener" aria-label="Twitter" class="icon">
+              <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path fill="currentColor" d="M18.245 2H21.5l-7.61 8.705L23.5 22h-7.031l-5.5-6.567L4.5 22H1.245l8.348-9.548L.5 2h7.206l4.973 5.936L18.245 2zm-1.231 18h2.127L7.028 4h-2.13l12.116 16z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <span>© <span id="year"></span> zuCorps</span>
+    </div>
+  </footer>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script defer src="./script.js"></script>
+</body>
+</html>
