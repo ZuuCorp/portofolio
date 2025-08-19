@@ -467,12 +467,32 @@ if ('serviceWorker' in navigator) {
     })
   }
   chips.forEach(ch => ch.addEventListener('click', () => {
-    chips.forEach(c => c.classList.remove('is-active'))
+    chips.forEach(c => { c.classList.remove('is-active'); c.setAttribute('aria-pressed','false'); c.setAttribute('aria-selected','false') })
     ch.classList.add('is-active')
+    ch.setAttribute('aria-pressed','true')
+    ch.setAttribute('aria-selected','true')
     active = ch.getAttribute('data-filter') || 'all'
     apply()
   }))
   search?.addEventListener('input', apply)
+})()
+
+// Three.js lazy init and pause on hidden
+let threeCleanup = null
+;(function(){
+  const canvas = document.getElementById('bg')
+  if (!canvas || !window.THREE) return
+  const start = () => { /* already initialized earlier */ }
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(en => {
+      if (en.isIntersecting) { start(); obs.disconnect() }
+    })
+  }, { rootMargin: '200px' })
+  obs.observe(canvas)
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) { try { renderer?.setAnimationLoop(null) } catch {} }
+    else { try { renderer?.setAnimationLoop(() => {}) } catch {} }
+  })
 })()
 
 // motion/data-saver adjustments

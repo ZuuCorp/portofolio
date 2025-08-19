@@ -44,15 +44,15 @@
         <div class="projects-filter" role="region" aria-label="Filtrer les projets">
           <input id="projectSearch" class="search-input" placeholder="Rechercher…" aria-label="Rechercher des projets">
           <div class="chips" role="tablist" aria-label="Catégories">
-            <button class="filter-chip is-active" data-filter="all" role="tab" aria-selected="true">Tous</button>
-            <button class="filter-chip" data-filter="web" role="tab">Web</button>
-            <button class="filter-chip" data-filter="bots" role="tab">Bots</button>
-            <button class="filter-chip" data-filter="security" role="tab">Sécurité</button>
-            <button class="filter-chip" data-filter="tools" role="tab">Outils</button>
-            <button class="filter-chip" data-filter="music" role="tab">Musique</button>
+            <button class="filter-chip is-active" data-filter="all" role="tab" aria-selected="true" aria-pressed="true">Tous</button>
+            <button class="filter-chip" data-filter="web" role="tab" aria-pressed="false">Web</button>
+            <button class="filter-chip" data-filter="bots" role="tab" aria-pressed="false">Bots</button>
+            <button class="filter-chip" data-filter="security" role="tab" aria-pressed="false">Sécurité</button>
+            <button class="filter-chip" data-filter="tools" role="tab" aria-pressed="false">Outils</button>
+            <button class="filter-chip" data-filter="music" role="tab" aria-pressed="false">Musique</button>
           </div>
         </div>
-        <div class="grid" role="list">
+        <div class="grid" role="tabpanel" aria-label="Liste des projets" role="list">
           <article class="project-card" role="listitem" data-tags="web stripe">
             <div class="icon-plate" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h15.5l-1.2 7.2a2 2 0 0 1-2 1.7H8.7l-.5 2.1H18v2H7.2a2 2 0 0 1-1.9-2.5L6 13H4V11h2.4l.7-3H3V6Z" fill="currentColor"/></svg>
