@@ -488,3 +488,15 @@ if (window.matchMedia('(max-width: 720px)').matches) {
   const tgl = document.getElementById('termToggle')
   if (tgl) tgl.style.display = 'none'
 }
+
+// back-to-top
+(function(){
+  const btn = document.getElementById('backTop')
+  if (!btn) return
+  const toggle = () => {
+    if (window.scrollY > 400) btn.classList.add('show'); else btn.classList.remove('show')
+  }
+  toggle()
+  window.addEventListener('scroll', toggle, { passive: true })
+  btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }))
+})()
