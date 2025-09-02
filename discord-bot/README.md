@@ -12,8 +12,7 @@ Ce bot crée automatiquement des salons et y poste un "container" (embed + compo
 
 ## Installation
 1. Copier le dossier
-2. Créer un fichier `.env` à la racine en se basant sur `.env.example`
-3. Installer les dépendances et lancer
+2. Installer les dépendances et lancer
 
 ```bash
 npm install
@@ -32,4 +31,4 @@ npm run dev
 - Le bot crée les salons et poste un embed avec des boutons
 
 ## Sécurité
-- Ne partagez pas votre `DISCORD_TOKEN`
+- Les identifiants sont hardcodés pour la démo. Supprimez/regénérez ensuite.

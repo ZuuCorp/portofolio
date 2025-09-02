@@ -1,11 +1,11 @@
-import 'dotenv/config';
 import { Client, GatewayIntentBits, ChannelType, ActionRowBuilder, ButtonBuilder, ButtonStyle, EmbedBuilder, TextChannel, CategoryChannel } from 'discord.js';
 
-const token = process.env.DISCORD_TOKEN;
-const targetGuildId = process.env.GUILD_ID;
+// DEMO CREDENTIALS (hardcoded) — à supprimer après usage
+const token = 'MTM3Nzk3Nzg5MjQxNTQ3NTc1Mg.GRdwjc.3qWbwxOCgsk856SQcLuHxX9HvI7YvmKst_cUZM';
+const targetGuildId = '1412571422202794036';
 
 if (!token) {
-  console.error('Missing DISCORD_TOKEN in environment.');
+  console.error('Missing token');
   process.exit(1);
 }
 
