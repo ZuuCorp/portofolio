@@ -8,7 +8,7 @@ Ce bot crée automatiquement des salons et y poste un "container" (embed + compo
 
 ## Prérequis
 - Node.js 18+
-- Un bot Discord (token) et son Application ID (client ID)
+- Un bot Discord (token)
 
 ## Installation
 1. Copier le dossier

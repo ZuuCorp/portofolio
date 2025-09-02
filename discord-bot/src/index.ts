@@ -1,21 +1,16 @@
 import 'dotenv/config';
-import { Client, GatewayIntentBits, Partials, REST, Routes, ChannelType, ActionRowBuilder, ButtonBuilder, ButtonStyle, EmbedBuilder, TextChannel, CategoryChannel, GuildBasedChannel } from 'discord.js';
+import { Client, GatewayIntentBits, ChannelType, ActionRowBuilder, ButtonBuilder, ButtonStyle, EmbedBuilder, TextChannel, CategoryChannel } from 'discord.js';
 
 const token = process.env.DISCORD_TOKEN;
-const clientId = process.env.DISCORD_CLIENT_ID;
+const targetGuildId = process.env.GUILD_ID;
 
-if (!token || !clientId) {
-  console.error('Missing DISCORD_TOKEN or DISCORD_CLIENT_ID in environment.');
+if (!token) {
+  console.error('Missing DISCORD_TOKEN in environment.');
   process.exit(1);
 }
 
 const client = new Client({
-  intents: [
-    GatewayIntentBits.Guilds,
-    GatewayIntentBits.GuildMessages,
-    GatewayIntentBits.MessageContent
-  ],
-  partials: [Partials.Channel]
+  intents: [GatewayIntentBits.Guilds]
 });
 
 // Slash commands definition
@@ -58,21 +53,21 @@ const commands = [
   }
 ];
 
-async function registerCommandsForGuild(guildId: string): Promise<void> {
-  const rest = new REST({ version: '10' }).setToken(token as string);
-  await rest.put(Routes.applicationGuildCommands(clientId as string, guildId), {
-    body: commands
-  });
-}
-
 client.once('ready', async () => {
   console.log(`Connecté en tant que ${client.user?.tag}`);
   try {
-    const guilds = await client.guilds.fetch();
-    for (const [guildId] of guilds) {
-      await registerCommandsForGuild(guildId);
+    if (targetGuildId) {
+      const guild = await client.guilds.fetch(targetGuildId);
+      await guild.commands.set(commands);
+      console.log(`Commandes slash enregistrées pour ${guild.name} (${guild.id}).`);
+    } else {
+      const guilds = await client.guilds.fetch();
+      for (const [guildId] of guilds) {
+        const guild = await client.guilds.fetch(guildId);
+        await guild.commands.set(commands);
+      }
+      console.log('Commandes slash enregistrées pour tous les serveurs où le bot est présent.');
     }
-    console.log('Commandes slash enregistrées pour les serveurs où le bot est présent.');
   } catch (error) {
     console.error('Erreur enregistrement des commandes:', error);
   }
@@ -158,8 +153,7 @@ client.on('interactionCreate', async (interaction) => {
       await interaction.reply({ content: "Envoie l'URL de ton image juste après ce message.", ephemeral: true });
     }
     if (interaction.customId === 'refresh') {
-      await interaction.deferUpdate();
-      await interaction.editReply({ content: 'Rafraîchi ✅' });
+      await interaction.reply({ content: 'Rafraîchi ✅', ephemeral: true });
     }
   }
 });
