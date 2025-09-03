@@ -456,6 +456,14 @@ if (paletteList) {
         break
       case 'zugeo':
         location.href = './projects.html'; break
+      case 'demo-restaurant':
+        location.href = './demos/restaurant/index.html'; break
+      case 'demo-salon':
+        location.href = './demos/salon/index.html'; break
+      case 'demo-photographe':
+        location.href = './demos/photographe/index.html'; break
+      case 'demo-coach':
+        location.href = './demos/coach/index.html'; break
     }
     closePalette()
   })
