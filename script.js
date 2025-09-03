@@ -8,6 +8,7 @@ if (header) {
     header.classList.toggle("open")
     const expanded = header.classList.contains('open')
     menuBtn.setAttribute('aria-expanded', expanded ? 'true' : 'false')
+    document.body.classList.toggle('is-locked', expanded)
   })
 }
 
@@ -45,6 +46,23 @@ gsap.registerPlugin(ScrollTrigger)
 
 gsap.from(".brand", { y: -18, opacity: 0, duration: 0.5, ease: "power3.out" })
 gsap.from(".nav a", { y: -18, opacity: 0, duration: 0.5, ease: "power3.out", stagger: 0.05 })
+
+// theme toggle
+;(function(){
+  const btn = document.getElementById('themeToggle')
+  const root = document.documentElement
+  const stored = localStorage.getItem('theme')
+  if (stored === 'light' || stored === 'dark') {
+    root.setAttribute('data-theme', stored)
+  } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+    root.setAttribute('data-theme', 'light')
+  }
+  btn?.addEventListener('click', () => {
+    const next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light'
+    if (next === 'dark') root.removeAttribute('data-theme'); else root.setAttribute('data-theme', 'light')
+    localStorage.setItem('theme', next)
+  })
+})()
 
 gsap.utils.toArray(".section").forEach(section => {
   if (section.id === 'accueil') return
