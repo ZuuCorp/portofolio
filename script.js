@@ -162,6 +162,21 @@ if (form) {
   })
 }
 
+// prefill contact form with category from query
+;(function(){
+  if (!/contact\.html$/.test(location.pathname)) return
+  const params = new URLSearchParams(location.search)
+  const cat = params.get('category')
+  if (!cat) return
+  const msg = document.getElementById('message')
+  try {
+    if (msg && !msg.value) {
+      msg.value = `Demande de devis — ${cat}\n\n`
+    }
+    document.getElementById('name')?.focus()
+  } catch {}
+})()
+
 let konamiSeq = []
 const konami = ["ArrowUp","ArrowUp","ArrowDown","ArrowDown","ArrowLeft","ArrowRight","ArrowLeft","ArrowRight","b","a"]
 window.addEventListener("keydown", e => {
