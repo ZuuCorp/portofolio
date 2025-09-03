@@ -466,6 +466,10 @@ if (paletteList) {
         location.href = './demos/coach/index.html'; break
       case 'demo-parfum':
         location.href = './demos/parfum/index.html'; break
+      case 'site-agence':
+        location.href = './demos/agency/index.html'; break
+      case 'site-immobilier':
+        location.href = './demos/immobilier/index.html'; break
     }
     closePalette()
   })
