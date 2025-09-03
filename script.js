@@ -470,6 +470,12 @@ if (paletteList) {
         location.href = './demos/agency/index.html'; break
       case 'site-immobilier':
         location.href = './demos/immobilier/index.html'; break
+      case 'site-medical':
+        location.href = './demos/medical/index.html'; break
+      case 'site-gastro':
+        location.href = './demos/gastro/index.html'; break
+      case 'site-mariage':
+        location.href = './demos/mariage/index.html'; break
     }
     closePalette()
   })
