@@ -175,6 +175,13 @@ if (form) {
     }
     const hidden = document.getElementById('category')
     if (hidden && 'value' in hidden) hidden.value = cat
+    const newTitle = `zuCorps · Contact — ${cat}`
+    document.title = newTitle
+    document.querySelector('meta[name="description"]')?.setAttribute('content', `Contact — Demande de devis ${cat}`)
+    document.querySelector('meta[property="og:title"]')?.setAttribute('content', newTitle)
+    document.querySelector('meta[name="twitter:title"]')?.setAttribute('content', newTitle)
+    document.querySelector('meta[property="og:description"]')?.setAttribute('content', `Demande de devis ${cat}`)
+    document.querySelector('meta[name="twitter:description"]')?.setAttribute('content', `Demande de devis ${cat}`)
     document.getElementById('name')?.focus()
   } catch {}
 })()
