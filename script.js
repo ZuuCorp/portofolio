@@ -464,6 +464,8 @@ if (paletteList) {
         location.href = './demos/photographe/index.html'; break
       case 'demo-coach':
         location.href = './demos/coach/index.html'; break
+      case 'demo-parfum':
+        location.href = './demos/parfum/index.html'; break
     }
     closePalette()
   })
