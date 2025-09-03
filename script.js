@@ -189,16 +189,16 @@ if (form) {
     const back = document.getElementById('formBack')
     const backLink = document.getElementById('backCatLink')
     const map = {
-      'Restaurant': './demos/restaurant/index.html',
-      'Salon': './demos/salon/index.html',
-      'Photographe': './demos/photographe/index.html',
-      'Coach': './demos/coach/index.html',
-      'Parfumerie': './demos/parfum/index.html',
-      'Médical': './demos/medical/index.html',
-      'Gastronomique': './demos/gastro/index.html',
-      'Photographe mariage': './demos/mariage/index.html',
-      'Agence': './demos/agency/index.html',
-      'Immobilier': './demos/immobilier/index.html'
+      'Restaurant': './sites/restaurant/index.html',
+      'Salon': './sites/salon/index.html',
+      'Photographe': './sites/photographe/index.html',
+      'Coach': './sites/coach/index.html',
+      'Parfumerie': './sites/parfum/index.html',
+      'Médical': './sites/medical/index.html',
+      'Gastronomique': './sites/gastro/index.html',
+      'Photographe mariage': './sites/mariage/index.html',
+      'Agence': './sites/agency/index.html',
+      'Immobilier': './sites/immobilier/index.html'
     }
     const href = map[cat]
     if (href && back && backLink) { back.style.display = ''; backLink.setAttribute('href', href) }
@@ -500,26 +500,26 @@ if (paletteList) {
         break
       case 'zugeo':
         location.href = './projects.html'; break
-      case 'demo-restaurant':
-        location.href = './demos/restaurant/index.html'; break
-      case 'demo-salon':
-        location.href = './demos/salon/index.html'; break
-      case 'demo-photographe':
-        location.href = './demos/photographe/index.html'; break
-      case 'demo-coach':
-        location.href = './demos/coach/index.html'; break
-      case 'demo-parfum':
-        location.href = './demos/parfum/index.html'; break
+      case 'site-restaurant':
+        location.href = './sites/restaurant/index.html'; break
+      case 'site-salon':
+        location.href = './sites/salon/index.html'; break
+      case 'site-photographe':
+        location.href = './sites/photographe/index.html'; break
+      case 'site-coach':
+        location.href = './sites/coach/index.html'; break
+      case 'site-parfum':
+        location.href = './sites/parfum/index.html'; break
       case 'site-agence':
-        location.href = './demos/agency/index.html'; break
+        location.href = './sites/agency/index.html'; break
       case 'site-immobilier':
-        location.href = './demos/immobilier/index.html'; break
+        location.href = './sites/immobilier/index.html'; break
       case 'site-medical':
-        location.href = './demos/medical/index.html'; break
+        location.href = './sites/medical/index.html'; break
       case 'site-gastro':
-        location.href = './demos/gastro/index.html'; break
+        location.href = './sites/gastro/index.html'; break
       case 'site-mariage':
-        location.href = './demos/mariage/index.html'; break
+        location.href = './sites/mariage/index.html'; break
     }
     closePalette()
   })
