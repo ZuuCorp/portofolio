@@ -182,6 +182,10 @@ if (form) {
     document.querySelector('meta[name="twitter:title"]')?.setAttribute('content', newTitle)
     document.querySelector('meta[property="og:description"]')?.setAttribute('content', `Demande de devis ${cat}`)
     document.querySelector('meta[name="twitter:description"]')?.setAttribute('content', `Demande de devis ${cat}`)
+    const crumbSep = document.getElementById('crumbSep')
+    const crumbCat = document.getElementById('crumbCategory')
+    if (crumbSep) crumbSep.style.display = ''
+    if (crumbCat) { crumbCat.textContent = cat; crumbCat.style.display = '' }
     document.getElementById('name')?.focus()
   } catch {}
 })()

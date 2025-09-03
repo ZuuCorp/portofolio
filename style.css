@@ -171,6 +171,11 @@ input:focus, textarea:focus { border-color: rgba(255,255,255,0.22); box-shadow: 
 .site-footer { padding: 26px 0 38px; border-top: 1px solid var(--border); background: rgba(11,11,11,0.5) }
 .site-footer .container { display: flex; align-items: center; justify-content: center; color: var(--muted) }
 
+.breadcrumb { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; color: var(--muted) }
+.breadcrumb a { color: var(--muted); text-decoration: none }
+.breadcrumb a:hover { color: var(--text) }
+.crumb-cat { font-weight: 600; color: var(--text) }
+
 .transition { position: fixed; inset: 0; background: var(--bg); transform: scaleX(0); transform-origin: left; z-index: 100; pointer-events: none; opacity: 0.9 }
 
 .easter-overlay { position: fixed; inset: 0; pointer-events: none; z-index: 120; opacity: 0; transition: opacity .3s ease }
