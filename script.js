@@ -173,6 +173,8 @@ if (form) {
     if (msg && !msg.value) {
       msg.value = `Demande de devis — ${cat}\n\n`
     }
+    const hidden = document.getElementById('category')
+    if (hidden && 'value' in hidden) hidden.value = cat
     document.getElementById('name')?.focus()
   } catch {}
 })()
