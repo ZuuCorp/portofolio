@@ -245,7 +245,9 @@ input:focus, textarea:focus { border-color: rgba(255,255,255,0.22); box-shadow: 
   :root[data-theme="light"] .site-header.open .nav { background: #ffffff }
   .grid { grid-template-columns: 1fr }
   .icon-plate { height: 160px }
-  .hero .hero-inner { width: calc(100% - 40px); padding: 18px 16px; transform: translateY(-8px) }
+  #bg { display: none }
+  .hero-right { display: none }
+  .hero .hero-inner { width: calc(100% - 40px); padding: 18px 16px; transform: none }
   .hero .btn { width: 100%; padding: 14px 20px; font-size: 16px }
   .terminal, .terminal-toggle, .palette { display: none !important }
   .terminal { visibility: hidden }
