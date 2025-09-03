@@ -186,6 +186,22 @@ if (form) {
     const crumbCat = document.getElementById('crumbCategory')
     if (crumbSep) crumbSep.style.display = ''
     if (crumbCat) { crumbCat.textContent = cat; crumbCat.style.display = '' }
+    const back = document.getElementById('formBack')
+    const backLink = document.getElementById('backCatLink')
+    const map = {
+      'Restaurant': './demos/restaurant/index.html',
+      'Salon': './demos/salon/index.html',
+      'Photographe': './demos/photographe/index.html',
+      'Coach': './demos/coach/index.html',
+      'Parfumerie': './demos/parfum/index.html',
+      'Médical': './demos/medical/index.html',
+      'Gastronomique': './demos/gastro/index.html',
+      'Photographe mariage': './demos/mariage/index.html',
+      'Agence': './demos/agency/index.html',
+      'Immobilier': './demos/immobilier/index.html'
+    }
+    const href = map[cat]
+    if (href && back && backLink) { back.style.display = ''; backLink.setAttribute('href', href) }
     document.getElementById('name')?.focus()
   } catch {}
 })()
