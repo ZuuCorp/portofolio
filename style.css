@@ -66,6 +66,7 @@ h3 { font-size: clamp(22px, 2.6vw, 28px); margin: 0 0 18px; font-weight: 600 }
 .brand { font-weight: 700; letter-spacing: 0.2px; text-decoration: none; color: var(--text) }
 .nav { display: flex; gap: 22px }
 .nav a { color: var(--muted); text-decoration: none; font-weight: 500; transition: color .2s }
+.nav a .nav-icon { width: 16px; height: 16px; vertical-align: -3px; margin-right: 8px; opacity: .9 }
 .nav a:hover { color: var(--text) }
 .nav a[aria-current="page"] { color: var(--text); position: relative }
 .nav a[aria-current="page"]::after { content: ""; position: absolute; left: 0; right: 0; bottom: -10px; height: 2px; background: currentColor; opacity: 0.5 }
