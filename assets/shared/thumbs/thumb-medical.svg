@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="120" viewBox="0 0 160 120" role="img" aria-label="Médical">
+  <rect width="160" height="120" rx="12" fill="#0f172a"/>
+  <g transform="translate(20,20)">
+    <rect x="0" y="12" width="120" height="68" rx="10" fill="#0b1220" stroke="rgba(148,163,184,.2)"/>
+    <rect x="10" y="22" width="28" height="48" rx="6" fill="#0f1b33"/>
+    <rect x="46" y="22" width="28" height="48" rx="6" fill="#0f1b33"/>
+    <rect x="82" y="22" width="28" height="48" rx="6" fill="#0f1b33"/>
+    <circle cx="60" cy="46" r="16" fill="#22d3ee"/>
+    <path d="M58 38h4v8h8v4h-8v8h-4v-8h-8v-4h8z" fill="#0b1220"/>
+  </g>
+</svg>
+

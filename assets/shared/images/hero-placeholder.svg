@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" role="img" aria-label="Image héro">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8fafc"/>
+      <stop offset="1" stop-color="#ffffff"/>
+    </linearGradient>
+    <linearGradient id="blob1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6366f1"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+    <linearGradient id="blob2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#10b981"/>
+      <stop offset="1" stop-color="#06b6d4"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <g opacity="0.12">
+    <circle cx="250" cy="160" r="110" fill="url(#blob1)"/>
+    <circle cx="980" cy="420" r="140" fill="url(#blob2)"/>
+  </g>
+  <g opacity="0.06" fill="#0f172a">
+    <circle cx="120" cy="520" r="4"/>
+    <circle cx="210" cy="470" r="3"/>
+    <circle cx="300" cy="520" r="4"/>
+    <circle cx="390" cy="470" r="3"/>
+    <circle cx="480" cy="520" r="4"/>
+    <circle cx="570" cy="470" r="3"/>
+    <circle cx="660" cy="520" r="4"/>
+    <circle cx="750" cy="470" r="3"/>
+    <circle cx="840" cy="520" r="4"/>
+    <circle cx="930" cy="470" r="3"/>
+    <circle cx="1020" cy="520" r="4"/>
+  </g>
+</svg>
+

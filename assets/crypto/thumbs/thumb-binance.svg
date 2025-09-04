@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="120" viewBox="0 0 160 120" role="img" aria-label="Binance">
+  <rect width="160" height="120" rx="12" fill="#0f172a"/>
+  <g transform="translate(16,16)" fill="#f59e0b">
+    <path d="M64 6l14 14-14 14-14-14z"/>
+    <path d="M34 36l14 14-14 14-14-14zM94 36l14 14-14 14-14-14z"/>
+    <path d="M64 66l14 14-14 14-14-14z"/>
+  </g>
+</svg>
+
