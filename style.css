@@ -222,7 +222,8 @@ input:focus, textarea:focus { border-color: rgba(255,255,255,0.22); box-shadow: 
 .projects-filter { display: grid; gap: 10px; margin-bottom: 14px }
 .search-input { width: 100%; padding: 12px 14px; border-radius: 12px; border: 1px solid var(--border); background: #0f0f0f; color: var(--text); outline: none }
 .chips { display: flex; gap: 8px; flex-wrap: wrap }
-.filter-chip { border: 1px solid var(--border); background: rgba(255,255,255,0.04); color: var(--text); border-radius: 999px; padding: 6px 10px; cursor: pointer }
+.filter-chip { border: 1px solid var(--border); background: rgba(255,255,255,0.04); color: var(--text); border-radius: 999px; padding: 6px 10px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px }
+.filter-chip .chip-icon { width: 16px; height: 16px; display: inline-block }
 .filter-chip.is-active, .filter-chip:hover { background: rgba(255,255,255,0.08) }
 .filter-chip[aria-pressed="true"] { background: rgba(255,255,255,0.12) }
 
