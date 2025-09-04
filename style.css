@@ -216,7 +216,8 @@ input:focus, textarea:focus { border-color: rgba(255,255,255,0.22); box-shadow: 
 .palette-dialog { width: min(680px, 92vw); background: #0f0f10; border: 1px solid var(--border); border-radius: 14px; box-shadow: 0 30px 80px rgba(0,0,0,0.6); overflow: hidden }
 .palette-input { width: 100%; padding: 14px 16px; border: none; outline: none; background: #0a0a0a; color: #fff; font: inherit; border-bottom: 1px solid var(--border) }
 .palette-list { margin: 0; padding: 8px 0; list-style: none; max-height: 50vh; overflow: auto }
-.palette-list li { padding: 10px 16px; color: var(--text); cursor: pointer }
+.palette-list li { padding: 10px 16px; color: var(--text); cursor: pointer; display: flex; align-items: center; gap: 10px }
+.palette-list .pal-icon { width: 16px; height: 16px; display: inline-block }
 .palette-list li:hover { background: rgba(255,255,255,0.06) }
 
 .projects-filter { display: grid; gap: 10px; margin-bottom: 14px }
