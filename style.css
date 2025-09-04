@@ -246,6 +246,7 @@ input:focus, textarea:focus { border-color: rgba(255,255,255,0.22); box-shadow: 
   .menu { display: inline-flex }
   .menu, .btn, .filter-chip { min-height: 44px }
   .site-header.open .nav { position: absolute; top: 70px; right: 20px; left: 20px; display: grid; gap: 12px; background: #0f0f0f; border: 1px solid var(--border); border-radius: 14px; padding: 14px }
+  .site-header.open .nav a { display: inline-flex; align-items: center }
   :root[data-theme="light"] .site-header.open .nav { background: #ffffff }
   .grid { grid-template-columns: 1fr }
   .icon-plate { height: 160px }
