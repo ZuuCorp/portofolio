@@ -20,12 +20,15 @@ h2 { font-size: clamp(18px, 3.2vw, 28px) }
 
 .site-header { position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,0.8); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border) }
 .site-header .container { display: flex; align-items: center; justify-content: space-between; height: 66px }
+.actions { display: inline-flex; align-items: center; gap: 12px }
 .brand { color: var(--text); text-decoration: none; font-weight: 700; letter-spacing: .2px }
 .nav { display: flex; gap: 18px }
 .nav a { color: var(--muted); text-decoration: none; font-weight: 600 }
 .nav a:hover { color: var(--text) }
 .menu { display: none; width: 40px; height: 40px; background: transparent; border: 1px solid var(--border); border-radius: 10px; color: var(--text); align-items: center; justify-content: center }
 .menu span { display: block; width: 18px; height: 2px; background: var(--text); margin: 3px auto; border-radius: 2px }
+.theme-toggle { width: 40px; height: 40px; background: transparent; border: 1px solid var(--border); border-radius: 10px; color: var(--text); display: inline-grid; place-items: center; cursor: pointer }
+.theme-toggle svg { width: 18px; height: 18px; color: var(--text) }
 
 .hero { position: relative; overflow: hidden }
 .hero .hero-inner { padding: 40px 0 10px }
